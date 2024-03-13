@@ -9,8 +9,8 @@ $fontfamily: 'Jost';
 
 //===== Переменные ==============================================================================//
 $minwidth: 320px;
-$mw: 1160px;
-$md1: $mw + 12px;
+$maxwidth: 1400px;
+$md1: $maxwidth + 12;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
@@ -20,7 +20,7 @@ $second_color: #282739;
 
 //===== Основная сетка ==========================================================================//
 ._container {
-   max-width: $mw;
+   max-width: $maxwidth;
    margin: 0 auto;
    padding: 0 10px;
    width: 100%;
@@ -34,6 +34,12 @@ $second_color: #282739;
       max-width: none;
       padding: 0 10px;
    }
+}
+._subcontainer {
+   max-width: 1130px;
+   margin: 0 auto;
+   padding: 0 10px;
+   width: 100%;
 }
 //===============================================================================================//
 
