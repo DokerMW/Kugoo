@@ -1,0 +1,83 @@
+.main {
+   &__banner {
+   }
+}
+.banner {
+   &__big-container {
+      background: url('../img/banner/gradiend.webp') left center / contain no-repeat,
+         url('../img/banner/main_image.webp') right center / contain no-repeat;
+      border-radius: 10px;
+      padding: 56px 10px;
+   }
+   &_btn {
+      padding: 15px 40px;
+      background-color: #fff;
+      color: $main_color;
+   }
+
+   &__address {
+      background: url('../img/banner/icons/gps.svg') 0 0 no-repeat;
+      padding: 0px 0px 0px 23px;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 17px;
+      color: #ffffff;
+      margin: 0px 0px 19px 0px;
+      span {
+         display: inline-block;
+         margin-left: 10px;
+         font-size: 12px;
+         line-height: 17px;
+         color: #ffffff;
+         opacity: 0.7;
+      }
+   }
+
+   &__title {
+      font-weight: 600;
+      max-width: 620px;
+      font-size: 35px;
+      line-height: 51px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0px 0px 7px 0px;
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      line-height: 29px;
+      color: #ffffff;
+      margin: 0px 0px 28px 0px;
+   }
+
+   &__cards {
+      display: flex;
+      gap: 35px;
+   }
+
+   &__card {
+   }
+}
+
+.banner-card {
+   display: flex;
+   align-items: center;
+   margin: 0px 0px 38px 0px;
+   gap: 15px;
+   &__logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.3);
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+      max-width: 150px;
+   }
+}
