@@ -41,6 +41,10 @@
          background-color: #fff;
          border-radius: 5px;
          overflow: hidden;
+         padding: 10px 20px;
+         &:focus {
+            box-shadow: inset 1px 1px 5px $main_color;
+         }
       }
    }
 

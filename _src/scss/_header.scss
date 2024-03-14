@@ -30,6 +30,11 @@
       font-size: 12px;
       line-height: 17px;
       color: $second_color;
+      @media (min-width: 992px) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
 }
 .menu-top {
@@ -48,6 +53,11 @@
       line-height: 17px;
       color: #5d6c7b;
       display: inline-block;
+      @media (min-width: 992px) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
 }
 .main-header {
@@ -86,6 +96,9 @@
          font-weight: 400;
          font-size: 14px;
          color: #5d6c7b;
+         &:focus {
+            box-shadow: inset 1px 1px 5px $main_color;
+         }
       }
       .search-icon {
          width: 40px;
@@ -109,8 +122,9 @@
       margin-left: auto;
       gap: 25px;
       object {
+         width: 100%;
          max-width: 20px;
-         max-height: 20px;
+         object-fit: cover;
       }
       span {
          font-weight: 500;
@@ -119,7 +133,11 @@
          color: $second_color;
       }
    }
-
+   &__scale,
+   &__likes {
+      max-width: 20px;
+      max-height: 20px;
+   }
    &__scale {
    }
 
@@ -127,6 +145,11 @@
    }
 
    &__cart {
+      @media (min-width: 992px) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
       a {
          display: flex;
          align-items: center;
@@ -192,11 +215,9 @@
    &__item {
       max-width: 12px;
       max-height: 12px;
+
       object {
          width: 100%;
-         &:hover {
-            fill: $main_color;
-         }
       }
    }
    &__item:not(:last-child) {
