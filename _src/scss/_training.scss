@@ -1,0 +1,62 @@
+.training {
+   margin: 0px 0px 100px 0px;
+   &__container {
+      height: 100%;
+   }
+   &__body {
+      display: flex;
+      align-items: center;
+      min-height: 463px;
+   }
+   &__info {
+      max-width: 645px;
+      padding: 0px 0px 0px 10px;
+      margin-left: auto;
+   }
+
+   &__title {
+      margin: 0px 0px 30px 0px;
+   }
+   &__subtitle {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      color: $second_color;
+      margin: 0px 0px 18px 0px;
+   }
+   &__item {
+      font-size: 18px;
+      line-height: 26px;
+      color: $second_color;
+      margin: 0px 0px 10px 0px;
+      position: relative;
+      padding: 0px 0px 0px 32px;
+      &::before {
+         content: '';
+         background: url('../img/info/icons/check_in_circle.svg') 0 0 / contain no-repeat;
+         display: inline-block;
+         width: 22px;
+         height: 22px;
+         position: absolute;
+         top: 1px;
+         left: 0;
+      }
+   }
+   &__image {
+      max-width: 515px;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      img {
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+   &__big-container {
+      position: relative;
+   }
+
+   &__list {
+   }
+}

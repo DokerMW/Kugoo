@@ -1,13 +1,24 @@
-.main {
-   &__banner {
-   }
-}
 .banner {
+   margin: 0px 0px 72px 0px;
    &__big-container {
-      background: url('../img/banner/gradiend.webp') left center / contain no-repeat,
-         url('../img/banner/main_image.webp') right center / contain no-repeat;
+      position: relative;
+      background: url('../img/banner/main_image.webp') right center / contain no-repeat;
       border-radius: 10px;
       padding: 56px 10px;
+      &::after {
+         position: absolute;
+         content: '';
+         width: 100%;
+         height: 100%;
+         background: url('../img/banner/gradiend.webp') left center / contain no-repeat;
+         top: 0;
+         left: 0;
+         z-index: 1;
+      }
+      ._container {
+         position: relative;
+         z-index: 4;
+      }
    }
    &_btn {
       padding: 15px 40px;
@@ -34,11 +45,7 @@
    }
 
    &__title {
-      font-weight: 600;
       max-width: 620px;
-      font-size: 35px;
-      line-height: 51px;
-      text-transform: uppercase;
       color: #ffffff;
       margin: 0px 0px 7px 0px;
    }

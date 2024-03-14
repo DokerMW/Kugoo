@@ -38,7 +38,8 @@
       align-items: center;
       margin: 0px 30px 0px 0px;
    }
-
+   &__item {
+   }
    &__item:not(:last-child) {
       margin: 0px 30px 0px 0px;
    }
@@ -46,6 +47,7 @@
       font-size: 12px;
       line-height: 17px;
       color: #5d6c7b;
+      display: inline-block;
    }
 }
 .main-header {
@@ -192,6 +194,9 @@
       max-height: 12px;
       object {
          width: 100%;
+         &:hover {
+            fill: $main_color;
+         }
       }
    }
    &__item:not(:last-child) {
