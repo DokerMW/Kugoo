@@ -74,9 +74,12 @@
       flex: 0 1 50%;
       display: flex;
       justify-content: space-between;
-      padding-left: 62px;
+      padding-left: 63px;
       & .top-footer__lists {
          display: flex;
+      }
+      & .top-footer__title {
+         margin: 0px 0px 20px 0px;
       }
    }
 
@@ -133,8 +136,8 @@
    border-radius: 5px;
    display: flex;
    align-items: center;
-   justify-content: center;
    margin: 0px 10px 0px 0px;
+   padding: 0 12px;
    gap: 12px;
    &:last-child {
       margin: 0px 0px 0px 0px;
