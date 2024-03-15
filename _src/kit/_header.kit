@@ -47,20 +47,70 @@
                   </div>
                   Каталог
                </button>
-               <ul class="menu-main__list">
-                  <li class="menu-main__item"><a href="#"></a></li>
-                  <li class="menu-main__item"><a href="#"></a></li>
-                  <li class="menu-main__item"><a href="#"></a></li>
-                  <li class="menu-main__item"><a href="#"></a></li>
-                  <li class="menu-main__item"><a href="#"></a></li>
-                  <li class="menu-main__item"><a href="#"></a></li>
-               </ul>
+               <div class="menu-main__body body-main">
+                  <nav class="body-main__menu">
+                     <div class="body-main__block">
+                        <h3 class="body-main__title"><a href="#">Каталог товаров</a></h3>
+                        <ul class="body-main__list">
+                           <li class="body-main__item"><a href="#">Электросамокаты</a></li>
+                           <li class="body-main__item"><a href="#">Электроскутеры</a></li>
+                           <li class="body-main__item"><a href="#">Электровелосипеды</a></li>
+                           <li class="body-main__item"><a href="#">Электровелосипеды</a></li>
+                        </ul>
+                     </div>
+                     <div class="body-main__block">
+                        <h3 class="body-main__title"><a href="#">Покупателям</a></h3>
+                        <ul class="body-main__list">
+                           <li class="body-main__item"><a href="#">Сервисный центр</a></li>
+                           <li class="body-main__item"><a href="#">Доставка и оплата</a></li>
+                           <li class="body-main__item"><a href="#">Рассрочка</a></li>
+                           <li class="body-main__item"><a href="#">Тест-драйв</a></li>
+                           <li class="body-main__item"><a href="#">Блог</a></li>
+                           <li class="body-main__item"><a href="#">Сотрудничество</a></li>
+                           <li class="body-main__item"><a href="#">Контакты</a></li>
+                           <li class="body-main__item"><a href="#">Акции</a></li>
+                        </ul>
+                     </div>
+                  </nav>
+                  <div class="body-main__contacts">
+                     <div class="body-main__block">
+                        <h3 class="body-main__title"><a href="#">Контакты</a></h3>
+                        <div class="body-main__lists">
+                           <ul class="body-main__list">
+                              <li class="body-main__item body-main__item_name">Call-центр</li>
+                              <li class="body-main__item body-main__item_phone">
+                                 <a href="#">+7 (800) 505-54-61</a>
+                              </li>
+                              <li class="body-main__item body-main__item_time">
+                                 Пн-Вс 10:00 - 20:00
+                              </li>
+                           </ul>
+                           <ul class="body-main__list">
+                              <li class="body-main__item body-main__item_name">Сервисный центр</li>
+                              <li class="body-main__item body-main__item_phone">
+                                 <a href="#">+7 (499) 350-76-92</a>
+                              </li>
+                              <li class="body-main__item body-main__item_time">
+                                 Пн-Вс 10:00 - 20:00
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="body-main__block">
+                        <a href="#" class="body-main__popup">Заказать звонок</a>
+                     </div>
+                  </div>
+               </div>
             </nav>
             <form action="#" class="main-header__search">
-               <input type="text" name="search" placeholder="Искать самокат KUGOO" />
-               <div class="search-icon">
+               <input
+                  type="text"
+                  name="search"
+                  data-item="placeholder"
+                  placeholder="Искать самокат KUGOO" />
+               <button type="submit" class="search-icon">
                   <object data="img/icons/search.svg" type="image/svg+xml"></object>
-               </div>
+               </button>
             </form>
             <div class="main-header__cart-control">
                <div class="main-header__scale">
