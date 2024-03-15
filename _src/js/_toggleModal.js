@@ -3,8 +3,6 @@ const modalItem = document.querySelector('.modal__item');
 
 const toggleModal = (e, t, r) => {
    document.addEventListener('click', (s) => {
-      console.log(s.target);
-
       (s.target.dataset.toggle == t ||
          s.target.parentNode.dataset.toggle == t ||
          (!s.composedPath().includes(r) && e.classList.contains('_active'))) &&
