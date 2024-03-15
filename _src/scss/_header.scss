@@ -13,6 +13,9 @@
       justify-content: space-between;
       align-items: center;
       min-height: 39px;
+      @media (max-width: $md2) {
+         min-height: 29px;
+      }
    }
    &__controls {
       display: flex;
@@ -35,6 +38,9 @@
             text-decoration: underline;
          }
       }
+      @media (max-width: $md3) {
+         font-size: 10px;
+      }
    }
 }
 .menu-top {
@@ -42,11 +48,23 @@
       display: flex;
       align-items: center;
       margin: 0px 30px 0px 0px;
+      @media (max-width: $md2) {
+         margin: 0px 15px 0px 0px;
+      }
+      @media (max-width: $md3) {
+         display: none;
+      }
    }
    &__item {
    }
    &__item:not(:last-child) {
       margin: 0px 30px 0px 0px;
+      @media (max-width: $md2) {
+         margin: 0px 15px 0px 0px;
+      }
+      @media (max-width: $md3) {
+         margin: 0px 10px 0px 0px;
+      }
    }
    &__link {
       font-size: 12px;
@@ -58,6 +76,9 @@
             text-decoration: underline;
          }
       }
+      @media (max-width: $md2) {
+         font-size: 10px;
+      }
    }
 }
 .main-header {
@@ -68,15 +89,29 @@
       align-items: center;
       min-height: 98px;
       position: relative;
+      @media (max-width: $md2) {
+         min-height: 68px;
+      }
    }
    &__logo {
       margin: 0px 35px 0px 0px;
+      max-width: 120px;
+      @media (max-width: $md1) {
+         margin: 0px 20px 0px 0px;
+      }
+      @media (max-width: $md3) {
+         margin: 0px 10px 0px 0px;
+      }
       a {
          font-weight: 700;
          font-size: 30px;
          line-height: 43px;
          text-transform: uppercase;
          color: $second_color;
+         @media (max-width: $md2) {
+            font-size: 20px;
+            line-height: 120%;
+         }
       }
    }
 
@@ -87,6 +122,12 @@
       width: 604px;
       height: 40px;
       display: flex;
+      @media (max-width: $md1) {
+         width: 400px;
+      }
+      @media (max-width: $md2) {
+         display: none;
+      }
       input {
          flex: 1 0 auto;
          height: 100%;
@@ -97,6 +138,16 @@
          font-weight: 400;
          font-size: 14px;
          color: #5d6c7b;
+         &::placeholder {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #5d6c7b;
+            @media (max-width: $md2) {
+               font-size: 10px;
+            }
+         }
          &:focus {
             box-shadow: inset 1px 1px 5px $main_color;
          }
@@ -110,6 +161,9 @@
          align-items: center;
          border-radius: 0 5px 5px 0;
          position: relative;
+         @media (max-width: $md2) {
+            height: 30px;
+         }
          &::before {
             content: '';
             width: 100%;
@@ -133,22 +187,35 @@
       margin-left: auto;
       max-height: 20px;
       gap: 25px;
+      @media (max-width: $md3) {
+         gap: 15px;
+      }
       object {
          width: 100%;
          max-width: 20px;
          object-fit: cover;
+         @media (max-width: $md3) {
+            max-width: 15px;
+         }
       }
       span {
          font-weight: 500;
          font-size: 14px;
          line-height: 20px;
          color: $second_color;
+         @media (max-width: $md3) {
+            font-size: 12px;
+         }
       }
    }
    &__scale,
    &__likes {
       max-width: 20px;
       max-height: 20px;
+      @media (max-width: $md3) {
+         max-width: 15px;
+         max-height: 15px;
+      }
    }
    &__scale {
    }
@@ -178,11 +245,33 @@
       align-items: center;
       padding: 0 18px 0 15px;
       margin: 0px 20px 0px 0px;
+      @media (max-width: $md2) {
+         height: 30px;
+         font-size: 14px;
+      }
+      @media (max-width: $md3) {
+         justify-content: center;
+         padding: 0;
+         min-width: 50px;
+      }
+      .btn-name {
+         font-family: 'Jost';
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 23px;
+         color: #ffffff;
+         @media (max-width: $md3) {
+            display: none;
+         }
+      }
       .btn-icon {
          position: relative;
          width: 13px;
          height: 10px;
          margin-right: 13px;
+         @media (max-width: $md3) {
+            margin-right: 0;
+         }
          span:nth-child(1) {
             top: 0;
             left: 0;
@@ -264,15 +353,59 @@
    border-radius: 10px;
    z-index: 100;
    transition: all 0.2s ease-in 0s;
+   flex-wrap: wrap;
+   @media (max-width: $md2) {
+      position: fixed;
+      height: calc(100% - 100px);
+      border-radius: 0px;
+      padding: 30px;
+      border: 2px solid $main_color;
+      overflow: auto;
+   }
    &._active {
       top: 100%;
       opacity: 1;
       visibility: visible;
+      @media (max-width: $md2) {
+         top: 100px;
+      }
    }
+   & .main-header__search {
+      height: 30px;
+      display: none;
+      flex: 1 1 100%;
+      margin: 0px 0px 20px 0px;
+      padding: 0 20px;
+      @media (max-width: $md2) {
+         display: flex;
+      }
+   }
+   & .menu-top__list {
+      display: none;
+      @media (max-width: $md3) {
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         width: 100%;
+         margin: 0px 0px 15px 0px;
+      }
+   }
+
    &__menu {
       display: flex;
       flex: 0 1 50%;
       justify-content: space-around;
+      @media (max-width: $md2) {
+         height: 100%;
+      }
+      @media (max-width: $md3) {
+         flex: 1 1 100%;
+         height: auto;
+         margin: 0px 0px 15px 0px;
+         padding: 15px 0;
+         border-bottom: 1px solid $main_color;
+         border-top: 1px solid $main_color;
+      }
    }
 
    &__block {
@@ -284,8 +417,15 @@
          font-size: 18px;
          line-height: 26px;
          color: $second_color;
+         @media (max-width: $md4) {
+            font-size: 16px;
+         }
       }
+
       margin: 0px 0px 17px 0px;
+      @media (max-width: $md4) {
+         margin: 0px 0px 10px 0px;
+      }
       @media (min-width: 992px) {
          &:hover {
             text-decoration: underline;
@@ -298,19 +438,27 @@
       flex-direction: column;
       flex-wrap: wrap;
       row-gap: 10px;
+      @media (max-width: $md4) {
+         row-gap: 5px;
+      }
    }
 
    &__item {
       padding-right: 46px;
-
+      @media (max-width: $md2) {
+         padding: 0;
+      }
       a {
          font-size: 14px;
-         line-height: 20px;
+         line-height: calc(20 / 14 * 100%);
          color: #5d6c7b;
          @media (min-width: 992px) {
             &:hover {
                text-decoration: underline;
             }
+         }
+         @media (max-width: $md4) {
+            font-size: 12px;
          }
       }
       &_name {
@@ -323,6 +471,9 @@
             font-weight: 500;
             font-size: 16px;
             color: $second_color;
+            @media (max-width: $md4) {
+               font-size: 12px;
+            }
          }
       }
 
@@ -337,10 +488,23 @@
       display: flex;
       justify-content: space-around;
       padding-left: 50px;
+      @media (max-width: $md2) {
+         height: 100%;
+         padding: 0;
+      }
+      @media (max-width: $md3) {
+         flex: 1 1 100%;
+         height: auto;
+         padding-bottom: 15px;
+         border-bottom: 1px solid $main_color;
+      }
       & .body-main__lists {
          display: flex;
          flex-direction: column;
          gap: 30px;
+         @media (max-width: $md3) {
+            flex-direction: row;
+         }
       }
       & .body-main__title {
          margin: 0px 0px 20px 0px;
@@ -358,6 +522,9 @@
          &:hover {
             text-decoration: underline;
          }
+      }
+      @media (max-width: $md3) {
+         display: none;
       }
    }
 }
