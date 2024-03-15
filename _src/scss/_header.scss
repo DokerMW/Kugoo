@@ -131,6 +131,7 @@
       display: flex;
       align-items: center;
       margin-left: auto;
+      max-height: 20px;
       gap: 25px;
       object {
          width: 100%;
@@ -262,7 +263,7 @@
    border: 3px solid $main_color;
    border-radius: 10px;
    z-index: 100;
-   transition: all 0.5s ease-in 0s;
+   transition: all 0.2s ease-in 0s;
    &._active {
       top: 100%;
       opacity: 1;

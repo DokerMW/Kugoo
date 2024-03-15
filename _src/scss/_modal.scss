@@ -1,13 +1,14 @@
 .modal {
+   position: relative;
    visibility: hidden;
    opacity: 0;
    transition: all 0.3s;
+   z-index: 101;
    &__item {
       background-color: #fff;
-      border-radius: 10px;
       display: flex;
       gap: 69px;
-      padding: 48px 58px 45px 40px;
+      padding: 40px 57px 45px 40px;
       position: relative;
       transform: scale(0);
       transition: all 0.3s;
@@ -29,17 +30,17 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-      z-index: 101;
+      z-index: 102;
    }
 
    &__close {
       position: absolute;
       background: url('../img/modal/icons/close_btn.svg') 0 0 / contain no-repeat;
-      top: 20px;
-      right: 20px;
-      width: 30px;
-      height: 30px;
-      z-index: 102;
+      top: 13px;
+      right: 13px;
+      width: 29px;
+      height: 29px;
+      z-index: 103;
       cursor: pointer;
       transition: all 0.3s;
       @media (min-width: 992px) {
@@ -81,6 +82,7 @@
       font-size: 12px;
       line-height: 17px;
       color: #5d6c7b;
+      margin: 0px 0px 20px 0px;
    }
    &__input {
       width: 263px;
@@ -94,7 +96,16 @@
          border: 1px solid #eaebed;
          border-radius: 5px;
          margin: 0px 0px 20px 0px;
-         padding: 10px 20px;
+         padding: 10px 24px;
+         &::placeholder {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.155em;
+            color: #5d6c7b;
+         }
          &:focus {
             box-shadow: inset 1px 1px 5px $main_color;
          }
@@ -111,8 +122,9 @@
    &__confirm {
       display: flex;
       align-items: start;
-      max-width: 228px;
+      max-width: 245px;
       gap: 15px;
+      padding-left: 17px;
    }
    &__agree {
       font-size: 12px;
@@ -127,6 +139,7 @@
    &__image {
       max-height: 100%;
       max-width: 600px;
+      padding: 8px 0;
       img {
          height: 100%;
          object-fit: cover;
