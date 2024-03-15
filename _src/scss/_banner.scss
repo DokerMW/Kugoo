@@ -1,10 +1,27 @@
 .banner {
    margin: 0px 0px 72px 0px;
    &__big-container {
+      ._container {
+         position: relative;
+         z-index: 4;
+      }
+   }
+   &__body {
       position: relative;
       background: url('../img/banner/main_image.webp') right center / contain no-repeat;
       border-radius: 10px;
       padding: 56px 10px;
+      @media (max-width: 1400px) {
+         background: url('../img/banner/main_image.webp') right center / cover no-repeat;
+      }
+      @media (max-width: $md1) {
+         padding: 40px 10px;
+      }
+      @media (max-width: $md3) {
+         background: $main_color;
+         padding: 20px 10px;
+         border-radius: 0;
+      }
       &::after {
          position: absolute;
          content: '';
@@ -14,16 +31,25 @@
          top: 0;
          left: 0;
          z-index: 1;
-      }
-      ._container {
-         position: relative;
-         z-index: 4;
+         @media (max-width: 1400px) {
+            background: url('../img/banner/gradiend.webp') left center / cover no-repeat;
+         }
+         @media (max-width: $md3) {
+            display: none;
+         }
       }
    }
    &_btn {
       padding: 15px 40px;
       background-color: #fff;
       color: $main_color;
+      @media (max-width: $md2) {
+         padding: 10px 40px;
+      }
+      @media (max-width: $md4) {
+         width: 100%;
+         text-align: center;
+      }
    }
 
    &__address {
@@ -35,6 +61,10 @@
       color: #ffffff;
       letter-spacing: 0.2px;
       margin: 0px 0px 19px 0px;
+      @media (max-width: $md1) {
+         margin: 0px 0px 10px 0px;
+      }
+
       span {
          display: inline-block;
          margin-left: 10px;
@@ -42,6 +72,10 @@
          line-height: 17px;
          color: #ffffff;
          opacity: 0.7;
+         @media (max-width: $md4) {
+            display: block;
+            margin-left: 0;
+         }
       }
    }
 
@@ -49,18 +83,41 @@
       max-width: 620px;
       color: #ffffff;
       margin: 0px 0px 7px 0px;
+      @media (max-width: $md1) {
+         max-width: 520px;
+      }
+      @media (max-width: $md2) {
+         max-width: 400px;
+      }
+      @media (max-width: $md4) {
+         max-width: none;
+      }
    }
 
    &__subtitle {
       font-size: 20px;
-      line-height: 29px;
+      line-height: calc(29 / 20 * 100%);
       color: #ffffff;
       margin: 0px 0px 28px 0px;
+      @media (max-width: $md1) {
+         font-size: 22px;
+         margin: 0px 0px 20px 0px;
+      }
+      @media (max-width: $md2) {
+         font-size: 18px;
+      }
    }
 
    &__cards {
       display: flex;
       gap: 45px;
+      @media (max-width: $md2) {
+         gap: 20px;
+      }
+      @media (max-width: $md3) {
+         flex-direction: column;
+         margin: 0px 0px 15px 0px;
+      }
    }
 
    &__card {
@@ -72,6 +129,9 @@
    align-items: center;
    margin: 0px 0px 38px 0px;
    gap: 15px;
+   @media (max-width: $md3) {
+      margin: 0px 0px 0px 0px;
+   }
    &__logo {
       width: 40px;
       height: 40px;
