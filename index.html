@@ -8,7 +8,7 @@
       <meta name="format-detection" content="telephone=no" />
       <link rel="shortcut icon" href="./img/icons/favicon.ico" type="image/x-icon" />
       <link rel="stylesheet" href="./css/style.css" />
-      <script src="js/script.js" defer></script>
+  		
       <title>Kugoo - Главная страница</title>
    </head>
    <body>
@@ -512,13 +512,19 @@
                Нет нужной модели, которую хотите протестировать?
             </h2>
             <div class="application__text">Оставьте заявку, и менеджер подберет нужный самокат</div>
-            <form action="#" class="application__form">
+            <form action="handler.php" method="POST" class="application__form">
                <div class="application__input">
-                  <input type="tel" name="phone" data-item="placeholder" placeholder="+7 (___) __ - __ - __" />
+                  <input
+                     class="input _phone"
+                     id="user-phone"
+                     type="tel"
+                     name="userphone"
+                     data-item="placeholder"
+                     placeholder="+7 (___) __ - __ - __" />
                   <button class="application__btn _btn">Оставить заявку на тест-драйв</button>
                </div>
                <div class="application__confirm">
-                  <input type="checkbox" />
+                  <input name="checkbox" type="checkbox" />
                   <span>
                      Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и
                      <a href="#">политикой конфиденциальности</a>
@@ -540,7 +546,11 @@
          Оставьте свою почту и станьте первым, кто получит скидку на новые самокаты
       </h3>
       <form action="#" class="email__form">
-         <input type="email" data-item="placeholder" placeholder="Введите Ваш email" />
+         <input
+            type="email"
+            name="usermail"
+            data-item="placeholder"
+            placeholder="Введите Ваш email" />
          <button class="email__btn _btn _btn_w">Подписаться</button>
       </form>
    </div>
@@ -563,14 +573,15 @@
                   <label for="#input" class="modal__label">Как с вами удобнее связаться?</label>
                   <input
                      id="input"
-                     class="modal__input"
+                     class="modal__input _phone"
                      type="tel"
+                     name="userphone"
                      data-item="placeholder"
                      placeholder="+7 (___) __ - __ - __" />
                   <button class="modal__btn _btn">Оформить предзаказ</button>
                </div>
                <div class="modal__confirm">
-                  <input type="checkbox" />
+                  <input name="checkbox" type="checkbox" />
                   <div class="modal__agree">
                      Нажимая на кнопку, вы соглашаетесь на обработку персональных данныхи
                      <span>политикой конфиденциальности</span>
@@ -727,5 +738,8 @@
    </div>
 </footer>
       </div>
+			<script src="./js/inputmask.min.js"></script>
+      <script src="./js/just-validate.production.min.js"></script>
+      <script src="./js/script.js"></script>
    </body>
 </html>
