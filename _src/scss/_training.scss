@@ -1,5 +1,8 @@
 .training {
    margin: 0px 0px 100px 0px;
+   @media (max-width: $md4) {
+      margin: 0px 0px 50px 0px;
+   }
    &__container {
       height: 100%;
    }
@@ -7,15 +10,33 @@
       display: flex;
       align-items: center;
       min-height: 463px;
+      @media (max-width: $md3) {
+         flex-direction: column;
+      }
    }
    &__info {
       max-width: 645px;
       padding: 0px 0px 0px 10px;
       margin-left: auto;
+      @media (max-width: $md1) {
+         max-width: 550px;
+      }
+      @media (max-width: $md2) {
+         max-width: 450px;
+      }
+      @media (max-width: $md3) {
+         max-width: none;
+      }
+      @media (max-width: $md4) {
+         padding: 0;
+      }
    }
 
    &__title {
       margin: 0px 0px 30px 0px;
+      @media (max-width: $md4) {
+         margin: 0px 0px 15px 0px;
+      }
    }
    &__subtitle {
       font-size: 20px;
@@ -23,6 +44,10 @@
       font-weight: 500;
       color: $second_color;
       margin: 0px 0px 18px 0px;
+      @media (max-width: $md4) {
+         font-size: 16px;
+         margin: 0px 0px 10px 0px;
+      }
    }
    &__item {
       font-size: 18px;
@@ -31,6 +56,11 @@
       margin: 0px 0px 10px 0px;
       position: relative;
       padding: 0px 0px 0px 32px;
+      @media (max-width: $md4) {
+         font-size: 14px;
+         margin: 0px 0px 5px 0px;
+         padding: 0px 0px 0px 25px;
+      }
       &::before {
          content: '';
          background: url('../img/info/icons/check_in_circle.svg') 0 0 / contain no-repeat;
@@ -48,9 +78,28 @@
       border-radius: 10px;
       top: 0;
       left: 0;
+      overflow: hidden;
+      @media (max-width: 1400px) {
+         max-width: 400px;
+      }
+      @media (max-width: $md2) {
+         max-width: 300px;
+      }
+      @media (max-width: $md3) {
+         position: relative;
+         max-width: none;
+         margin: 0px 0px 20px 0px;
+         border-radius: 0;
+      }
+      @media (max-width: $md4) {
+         margin: 0px 0px 10px 0px;
+      }
       img {
          height: 100%;
-         object-fit: contain;
+         object-fit: cover;
+         @media (max-width: $md3) {
+            width: 100%;
+         }
       }
    }
    &__big-container {
