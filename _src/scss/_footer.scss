@@ -17,11 +17,26 @@
    padding: 46px 0 75px 0;
    display: flex;
    border-bottom: 1px solid rgba(93, 108, 123, 0.2);
-
+   @media (max-width: $md1) {
+      padding: 30px 0;
+   }
+   @media (max-width: $md3) {
+      padding: 30px 52px;
+   }
+   @media (max-width: $md4) {
+      flex-direction: column;
+      padding: 20px 0;
+      align-items: center;
+      row-gap: 20px;
+   }
    &__menu {
       display: flex;
       flex: 0 1 50%;
       justify-content: space-between;
+      @media (max-width: $md3) {
+         flex-direction: column;
+         row-gap: 20px;
+      }
    }
 
    &__block {
@@ -33,12 +48,16 @@
          font-size: 18px;
          line-height: 26px;
          color: $second_color;
+         white-space: nowrap;
       }
       margin: 0px 0px 17px 0px;
       @media (min-width: 992px) {
          &:hover {
             text-decoration: underline;
          }
+      }
+      @media (max-width: $md1) {
+         margin: 0px 0px 10px 0px;
       }
    }
 
@@ -48,6 +67,12 @@
       flex-wrap: wrap;
       row-gap: 10px;
       max-height: 110px;
+      @media (max-width: $md1) {
+         row-gap: 5px;
+      }
+      @media (max-width: $md2) {
+         max-height: none;
+      }
    }
 
    &__item {
@@ -57,6 +82,7 @@
          font-size: 14px;
          line-height: 20px;
          color: #5d6c7b;
+
          @media (min-width: 992px) {
             &:hover {
                text-decoration: underline;
@@ -73,6 +99,7 @@
             font-weight: 500;
             font-size: 16px;
             color: $second_color;
+            white-space: nowrap;
          }
       }
 
@@ -87,11 +114,26 @@
       display: flex;
       justify-content: space-between;
       padding-left: 63px;
+      @media (max-width: $md1) {
+         padding-left: 0;
+      }
+      @media (max-width: $md3) {
+         flex-direction: column;
+      }
       & .top-footer__lists {
          display: flex;
+         @media (max-width: $md2) {
+            flex-direction: column;
+         }
+      }
+      & .top-footer__list {
+         margin: 0px 0px 20px 0px;
       }
       & .top-footer__title {
          margin: 0px 0px 20px 0px;
+         @media (max-width: $md1) {
+            margin: 0px 0px 10px 0px;
+         }
       }
    }
 
@@ -102,6 +144,7 @@
       line-height: 17px;
       color: $main_color;
       padding-top: 5px;
+      white-space: nowrap;
       @media (min-width: 992px) {
          &:hover {
             text-decoration: underline;
@@ -115,12 +158,22 @@
    justify-content: space-between;
    min-height: 115px;
    border-bottom: 1px solid rgba(93, 108, 123, 0.2);
-
+   @media (max-width: $md1) {
+      padding: 20px 0;
+      flex-direction: column;
+      gap: 20px;
+   }
    &__links {
       display: flex;
       align-items: center;
-
+      @media (max-width: $md4) {
+         flex-direction: column;
+         gap: 15px;
+         align-items: flex-start;
+         text-align: center;
+      }
       a {
+         max-width: 152px;
          transition: all 0.3s;
          @media (min-width: 992px) {
             &:hover {
@@ -133,6 +186,9 @@
    &__logo {
       max-width: 116px;
       margin-right: 59px;
+      @media (max-width: $md1) {
+         margin-right: 20px;
+      }
       a {
          display: inline-block;
          width: 100%;
@@ -190,10 +246,21 @@
    align-items: center;
    justify-content: space-between;
    min-height: 60px;
+   @media (max-width: $md4) {
+      flex-direction: column;
+      padding: 10px 0;
+   }
    &__policy {
       display: flex;
       align-items: center;
       gap: 44px;
+      @media (max-width: $md2) {
+         flex-direction: column;
+         gap: 5px;
+      }
+      @media (max-width: $md4) {
+         margin: 0px 0px 10px 0px;
+      }
    }
 
    &__requisites,
@@ -218,7 +285,9 @@
       align-items: center;
       gap: 10px;
       margin: 0px 38px 0px 0px;
-
+      @media (max-width: $md2) {
+         display: none;
+      }
       a {
          width: 30px;
          height: 22px;
