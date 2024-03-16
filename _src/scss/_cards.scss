@@ -1,22 +1,42 @@
 .cards {
    margin: 0px 0px 100px 0px;
+   @media (max-width: $md3) {
+      margin: 0px 0px 50px 0px;
+   }
    &__container {
    }
 
    &__title {
       text-align: center;
       margin: 0px 0px 50px 0px;
+      @media (max-width: $md3) {
+         margin: 0px 0px 25px 0px;
+      }
    }
 
    &__row {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -15px;
+      @media (max-width: $md4) {
+         margin: 0;
+      }
    }
 
    &__column {
       flex: 0 1 25%;
       padding: 0 15px;
+      @media (max-width: $md1) {
+         flex: 0 1 33.333%;
+         margin: 0px 0px 30px 0px;
+      }
+      @media (max-width: $md2) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: $md4) {
+         flex: 1 1 100%;
+         margin: 0px 0px 15px 0px;
+      }
    }
 
    &__item {
@@ -57,6 +77,10 @@
       border-radius: 5px;
       line-height: 17px;
       padding: 4px 9px;
+      @media (max-width: $md3) {
+         font-size: 10px;
+         padding: 2px 5px;
+      }
       &_hit {
          background-color: #ee685f;
       }
@@ -75,6 +99,9 @@
 
    &__body {
       padding: 21px 25px 19px 24px;
+      @media (max-width: $md3) {
+         padding: 15px;
+      }
    }
 
    &__title {
@@ -84,6 +111,9 @@
       line-height: 26px;
       color: $second_color;
       margin: 0px 0px 21px 0px;
+      @media (max-width: $md3) {
+         margin: 0px 0px 15px 0px;
+      }
    }
 
    &__list {
@@ -92,6 +122,10 @@
       grid-template-rows: 1fr 1fr;
       margin: 0px 0px 13px 0px;
       padding-right: 7px;
+      @media (max-width: $md3) {
+         margin: 0px 0px 10px 0px;
+         padding-right: 0px;
+      }
    }
 
    &__item {
@@ -100,6 +134,9 @@
       white-space: nowrap;
       gap: 10px;
       margin: 0px 0px 15px 0px;
+      @media (max-width: $md3) {
+         gap: 5px;
+      }
       span {
          font-family: 'Roboto';
          font-style: normal;
@@ -107,11 +144,18 @@
          font-size: 14px;
          line-height: 16px;
          color: #5d6c7b;
+         @media (max-width: $md3) {
+            font-size: 12px;
+         }
       }
       object {
          width: 18px;
          height: 18px;
          object-fit: cover;
+         @media (max-width: $md3) {
+            width: 14px;
+            height: 14px;
+         }
       }
    }
 
@@ -130,6 +174,9 @@
       text-decoration-line: line-through;
       color: #5d6c7b;
       line-height: 110%;
+      @media (max-width: $md3) {
+         font-size: 10px;
+      }
    }
 
    &__new-price {
@@ -137,10 +184,16 @@
       font-size: 20px;
       line-height: 29px;
       color: $second_color;
+      @media (max-width: $md3) {
+         font-size: 18px;
+      }
    }
    &__icons {
       display: flex;
       gap: 10px;
+      @media (max-width: $md3) {
+         align-items: center;
+      }
    }
    &__cart {
    }
@@ -155,6 +208,10 @@
       border-radius: 50%;
       cursor: pointer;
       transition: border 0.3s;
+      @media (max-width: $md3) {
+         width: 30px;
+         height: 30px;
+      }
       &:hover {
          border: 1.3px solid $main_color;
       }
