@@ -3,3 +3,4 @@
 //@prepros-append _toggleModal.js
 //@prepros-append _bodyLock.js
 //@prepros-append _validation.js
+//@prepros-append _checkbox.js

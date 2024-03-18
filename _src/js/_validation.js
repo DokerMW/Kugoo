@@ -13,10 +13,13 @@ forms.forEach((form) => {
             errorMessage: 'Укажите телефон',
          },
       ])
-      .addField('[name=checkbox]', [
+      .addField('.checkbox', [
          {
             rule: 'required',
             errorMessage: ' ',
+            errorFieldStyle: {
+               border: '1px solid red',
+            },
          },
       ])
       .onSuccess((event) => {

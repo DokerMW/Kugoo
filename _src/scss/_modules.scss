@@ -69,3 +69,25 @@
    top: -10px;
 }
 //===============================================================================================//
+
+//===== checkbox ==============================================================================//
+.checkbox {
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   border: 1px solid #707070;
+   margin-top: 3px;
+   input {
+      display: none;
+   }
+   &._active {
+      background: url('../img/modal/icons/check.svg') 50% 50% no-repeat;
+   }
+   & .error {
+      border: 1px solid red;
+   }
+}
+
+//===============================================================================================//
