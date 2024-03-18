@@ -13,7 +13,7 @@ forms.forEach((form) => {
             errorMessage: 'Укажите телефон',
          },
       ])
-      .addField('.checkbox', [
+      .addField('.input-check', [
          {
             rule: 'required',
             errorMessage: ' ',
@@ -39,7 +39,7 @@ forms.forEach((form) => {
                }
             });
          };
-         ajaxSend();
+         ajaxSend(formData);
       });
 });
 
