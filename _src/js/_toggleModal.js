@@ -1,5 +1,7 @@
-const modal = document.querySelector('.modal');
-const modalItem = document.querySelector('.modal__item');
+const modal = document.querySelector('.modal'),
+   modalThx = document.querySelector('.modal-thx'),
+   modalDialog = document.querySelector('.modal-dialog'),
+   modalThxDialog = document.querySelector('.modal-thx-dialog');
 
 const toggleModal = (e, t, r) => {
    document.addEventListener('click', (s) => {
@@ -13,4 +15,5 @@ const toggleModal = (e, t, r) => {
       });
 };
 
-toggleModal(modal, 'modal', modalItem);
+toggleModal(modal, 'modal', modalDialog);
+toggleModal(modalThx, 'modal-thx', modalThxDialog);

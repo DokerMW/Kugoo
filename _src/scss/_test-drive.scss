@@ -27,14 +27,12 @@
          max-width: none;
       }
    }
-
    &__title {
       margin: 0px 0px 30px 0px;
       @media (max-width: $md4) {
          margin: 0px 0px 15px 0px;
       }
    }
-
    &__subtitle {
       font-size: 20px;
       line-height: 24px;
@@ -46,10 +44,6 @@
          margin: 0px 0px 10px 0px;
       }
    }
-
-   &__list {
-   }
-
    &__item {
       font-size: 18px;
       line-height: 26px;

@@ -1,31 +1,44 @@
-const forms = document.querySelectorAll('form');
+const inputTel = document.querySelectorAll('input');
+
+const forms = document.querySelectorAll('._send');
 
 forms.forEach((form) => {
    const validation = new JustValidate(form, {
       errorFieldCssClass: 'is-invalid',
    });
    validation
-      .addField('input', [
+      .addField('[name=usertel]', [
          {
             rule: 'required',
             errorMessage: 'Укажите телефон',
          },
       ])
-      .onSuccess((e) => {
-         const t = e.target;
-         ((e) => {
-            fetch(t.getAttribute('action'), { method: t.getAttribute('method'), body: e }).then(
-               (e) => {
-                  e.ok
-                     ? (t.reset(), modal.classList.remove('_active'))
-                     : alert('Ошибка: '.response.statusText);
+      .addField('[name=checkbox]', [
+         {
+            rule: 'required',
+            errorMessage: ' ',
+         },
+      ])
+      .onSuccess((event) => {
+         const thisForm = event.target;
+         const formData = new FormData(thisForm);
+         const ajaxSend = (formData) => {
+            fetch(thisForm.getAttribute('action'), {
+               method: thisForm.getAttribute('method'),
+               body: formData,
+            }).then((response) => {
+               if (response.ok) {
+                  thisForm.reset(),
+                     modal.classList.remove('_active'),
+                     modalThx.classList.add('_active');
+               } else {
+                  alert('Ошибка: '.response.statusText);
                }
-            );
-         })(new FormData(t));
+            });
+         };
+         ajaxSend();
       });
 });
-
-const inputTel = document.querySelectorAll('input');
 
 inputTel.forEach((input) => {
    input.addEventListener('focus', function () {
@@ -33,7 +46,7 @@ inputTel.forEach((input) => {
          input.classList.add('_mask');
          Inputmask('+9 (999) 999-99-99', {
             placeholder: '+7 (___) __  __  __',
-            clearIncomplete: true,
+            clearIncomplete: !0,
             clearMaskOnLostFocus: true,
          }).mask(input);
       }

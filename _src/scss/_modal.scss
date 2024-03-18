@@ -1,38 +1,76 @@
-.modal {
-   position: relative;
+.popup {
+   z-index: 200;
+   padding: 30px 10px;
+   position: fixed;
+   top: 0px;
+   left: 0;
+   width: 100%;
+   height: 100%;
    visibility: hidden;
-   opacity: 0;
-   transition: all 0.3s;
-   z-index: 101;
-   &__item {
+   &::before {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+   }
+   &._active {
+      overflow: auto;
+      visibility: visible;
+      -webkit-transition: all 0.8s ease 0s;
+      transition: all 0.8s ease 0s;
+      &::before {
+         content: '';
+         opacity: 1;
+      }
+      & .popup__body {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+      }
+   }
+   &__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      min-height: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      width: 100%;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      align-items: center;
+   }
+   &__body {
+      -webkit-transform: scale(1);
+      transform: scale(1);
       background-color: #fff;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
       display: flex;
       gap: 69px;
       padding: 40px 57px 45px 40px;
       position: relative;
-      transform: scale(0);
-      transition: all 0.3s;
-   }
-   &._active {
-      visibility: visible;
-      opacity: 1;
-      & .modal__item {
-         transform: scale(1);
+      @media (max-width: $md3) {
+         padding: 30px;
       }
    }
-   &__overlay {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 102;
-   }
-
+}
+.modal {
    &__close {
       position: absolute;
       background: url('../img/modal/icons/close_btn.svg') 0 0 / contain no-repeat;
@@ -52,7 +90,6 @@
    &__body {
       max-width: 286px;
    }
-
    &__title {
       font-weight: 600;
       font-size: 25px;
@@ -60,36 +97,34 @@
       text-transform: uppercase;
       color: $second_color;
       margin: 0px 0px 9px 0px;
+      @media (max-width: $md3) {
+         font-size: 22px;
+      }
    }
-
    &__subtitle {
       font-size: 16px;
       line-height: 20px;
       color: $second_color;
       margin: 0px 0px 29px 0px;
+      @media (max-width: $md3) {
+         margin: 0px 0px 15px 0px;
+      }
    }
-
    &__text {
       font-size: 14px;
       line-height: 20px;
       color: $second_color;
       margin: 0px 0px 86px 0px;
-   }
-
-   &__form {
-   }
-   &__label {
-      font-size: 12px;
-      line-height: 17px;
-      color: #5d6c7b;
-      margin: 0px 0px 20px 0px;
+      @media (max-width: $md3) {
+         margin: 0px 0px 50px 0px;
+      }
    }
    &__input {
       width: 263px;
       display: flex;
       flex-wrap: wrap;
       margin: 0px 0px 16px 0px;
-
+      position: relative;
       input {
          height: 53px;
          flex: 1 1 100%;
@@ -111,6 +146,12 @@
          }
       }
    }
+   &__label {
+      font-size: 12px;
+      line-height: 17px;
+      color: #5d6c7b;
+      margin: 0px 0px 20px 0px;
+   }
    &__btn {
       flex: 1 1 100%;
       height: 53px;
@@ -118,13 +159,13 @@
       text-align: center;
       color: #ffffff;
    }
-
    &__confirm {
       display: flex;
       align-items: start;
       max-width: 245px;
       gap: 15px;
       padding-left: 17px;
+      position: relative;
    }
    &__agree {
       font-size: 12px;
@@ -135,7 +176,6 @@
          text-decoration: underline;
       }
    }
-
    &__image {
       max-height: 100%;
       max-width: 600px;
@@ -143,6 +183,9 @@
       img {
          height: 100%;
          object-fit: cover;
+      }
+      @media (max-width: $md2) {
+         display: none;
       }
    }
 }

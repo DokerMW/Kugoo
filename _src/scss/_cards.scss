@@ -3,9 +3,6 @@
    @media (max-width: $md3) {
       margin: 0px 0px 50px 0px;
    }
-   &__container {
-   }
-
    &__title {
       text-align: center;
       margin: 0px 0px 50px 0px;
@@ -13,7 +10,6 @@
          margin: 0px 0px 25px 0px;
       }
    }
-
    &__row {
       display: flex;
       flex-wrap: wrap;
@@ -22,7 +18,6 @@
          margin: 0;
       }
    }
-
    &__column {
       flex: 0 1 25%;
       padding: 0 15px;
@@ -38,11 +33,7 @@
          margin: 0px 0px 15px 0px;
       }
    }
-
-   &__item {
-   }
 }
-
 .item-card {
    border-radius: 10px;
    border: 1.5px solid #eaebed;
@@ -66,7 +57,6 @@
          }
       }
    }
-
    &__badge {
       position: absolute;
       top: 10px;
@@ -88,7 +78,6 @@
          background-color: #75d14a;
       }
    }
-
    &__icon-scales {
       width: 20px;
       height: 20px;
@@ -96,14 +85,12 @@
       top: 18px;
       right: 17px;
    }
-
    &__body {
       padding: 21px 25px 19px 24px;
       @media (max-width: $md3) {
          padding: 15px;
       }
    }
-
    &__title {
       display: inline-block;
       font-weight: 600;
@@ -115,7 +102,6 @@
          margin: 0px 0px 15px 0px;
       }
    }
-
    &__list {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -127,7 +113,6 @@
          padding-right: 0px;
       }
    }
-
    &__item {
       display: flex;
       align-items: center;
@@ -158,16 +143,11 @@
          }
       }
    }
-
    &__footer {
       display: flex;
       justify-content: space-between;
       margin: 0px 0px 16px 0px;
    }
-
-   &__prices {
-   }
-
    &__old-price {
       font-weight: 500;
       font-size: 12px;
@@ -178,7 +158,6 @@
          font-size: 10px;
       }
    }
-
    &__new-price {
       font-weight: 600;
       font-size: 20px;
@@ -194,8 +173,6 @@
       @media (max-width: $md3) {
          align-items: center;
       }
-   }
-   &__cart {
    }
    &__cart,
    &__like {
@@ -220,10 +197,6 @@
          height: 20px;
       }
    }
-
-   &__like {
-   }
-
    &__btn {
       width: 100%;
       height: 37px;

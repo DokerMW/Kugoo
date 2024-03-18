@@ -4,11 +4,13 @@
       <meta charset="UTF-8" />
       <meta
          name="viewport"
-         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+         content="width=device-width, initial-scale=1.0" />
       <meta name="format-detection" content="telephone=no" />
       <link rel="shortcut icon" href="./img/icons/favicon.ico" type="image/x-icon" />
       <link rel="stylesheet" href="./css/style.css" />
-  		
+  		<script src="./js/inputmask.min.js" defer></script>
+      <script src="./js/just-validate.production.min.js" defer></script>
+      <script src="./js/script.js" defer></script>
       <title>Kugoo - Главная страница</title>
    </head>
    <body>
@@ -54,12 +56,12 @@
                <a href="./">Kugoo</a>
             </div>
             <nav class="main-header__menu menu-main">
-               <button class="menu-main__button _btn">
-                  <div class="btn-icon">
+               <button name="button" class="menu-main__button _btn">
+                  <span class="btn-icon">
                      <span></span>
                      <span></span>
                      <span></span>
-                  </div>
+                  </span>
                   <span class="btn-name">Каталог</span>
                </button>
                <div class="menu-main__body body-main">
@@ -80,7 +82,7 @@
                         name="search"
                         data-item="placeholder"
                         placeholder="Искать самокат KUGOO" />
-                     <button type="submit" class="search-icon">
+                     <button name="button" type="submit" class="search-icon">
                         <object data="img/icons/search.svg" type="image/svg+xml"></object>
                      </button>
                   </form>
@@ -144,7 +146,7 @@
                   name="search"
                   data-item="placeholder"
                   placeholder="Искать самокат KUGOO" />
-               <button type="submit" class="search-icon">
+               <button name="button" type="submit" class="search-icon">
                   <object data="img/icons/search.svg" type="image/svg+xml"></object>
                </button>
             </form>
@@ -199,7 +201,7 @@
                   <div class="banner-card__text">Проверите лучшие самокаты в деле</div>
                </div>
             </div>
-            <button data-toggle="modal" class="banner_btn _btn _btn_w">Записаться</button>
+            <button name="button" data-toggle="modal" class="banner_btn _btn _btn_w">Записаться</button>
          </div>
       </div>
    </div>
@@ -326,7 +328,7 @@
                         </div>
                      </div>
                   </div>
-                  <button class="item-card__btn _btn">Записаться на тест-драйв</button>
+                  <button name="button" class="item-card__btn _btn">Записаться на тест-драйв</button>
                </div>
             </div>
          </div>
@@ -383,7 +385,7 @@
                         </div>
                      </div>
                   </div>
-                  <button class="item-card__btn _btn">Записаться на тест-драйв</button>
+                  <button name="button" class="item-card__btn _btn">Записаться на тест-драйв</button>
                </div>
             </div>
          </div>
@@ -440,7 +442,7 @@
                         </div>
                      </div>
                   </div>
-                  <button class="item-card__btn _btn">Записаться на тест-драйв</button>
+                  <button name="button" class="item-card__btn _btn">Записаться на тест-драйв</button>
                </div>
             </div>
          </div>
@@ -497,7 +499,7 @@
                         </div>
                      </div>
                   </div>
-                  <button class="item-card__btn _btn">Записаться на тест-драйв</button>
+                  <button name="button" class="item-card__btn _btn">Записаться на тест-драйв</button>
                </div>
             </div>
          </div>
@@ -512,16 +514,18 @@
                Нет нужной модели, которую хотите протестировать?
             </h2>
             <div class="application__text">Оставьте заявку, и менеджер подберет нужный самокат</div>
-            <form action="handler.php" method="POST" class="application__form">
+            <form action="handler.php" method="POST" class="application__form _send">
                <div class="application__input">
                   <input
                      class="input _phone"
                      id="user-phone"
                      type="tel"
-                     name="userphone"
+                     name="usertel"
                      data-item="placeholder"
                      placeholder="+7 (___) __ - __ - __" />
-                  <button class="application__btn _btn">Оставить заявку на тест-драйв</button>
+                  <button name="button" class="application__btn _btn">
+                     Оставить заявку на тест-драйв
+                  </button>
                </div>
                <div class="application__confirm">
                   <input name="checkbox" type="checkbox" />
@@ -551,49 +555,60 @@
             name="usermail"
             data-item="placeholder"
             placeholder="Введите Ваш email" />
-         <button class="email__btn _btn _btn_w">Подписаться</button>
+         <button name="button" class="email__btn _btn _btn_w">Подписаться</button>
       </form>
    </div>
 </section>
-<section class="modal">
-   <div class="modal__overlay">
-      <div class="modal__item">
-         <div class="modal__close" data-toggle="modal"></div>
-         <div class="modal__body">
-            <h2 class="modal__title">
-               Запишитесь <br />
-               натест-драйв электросамоката
-            </h2>
-            <h3 class="modal__subtitle">и подберите модель для себя</h3>
-            <div class="modal__text">
-               Менеджер свяжется с вами в течение 5 минут, чтобы согласовать время.
-            </div>
-            <form action="#" class="modal__form">
-               <div class="modal__input">
-                  <label for="#input" class="modal__label">Как с вами удобнее связаться?</label>
-                  <input
-                     id="input"
-                     class="modal__input _phone"
-                     type="tel"
-                     name="userphone"
-                     data-item="placeholder"
-                     placeholder="+7 (___) __ - __ - __" />
-                  <button class="modal__btn _btn">Оформить предзаказ</button>
+<section class="modals">
+   <div class="modals__popup popup popup_contact modal">
+      <div class="popup__content modal-dialog">
+         <div class="popup__body">
+            <div class="modal__close" data-toggle="modal"></div>
+            <div class="modal__body">
+               <h2 class="modal__title">
+                  Запишитесь <br />
+                  натест-драйв электросамоката
+               </h2>
+               <h3 class="modal__subtitle">и подберите модель для себя</h3>
+               <div class="modal__text">
+                  Менеджер свяжется с вами в течение 5 минут, чтобы согласовать время.
                </div>
-               <div class="modal__confirm">
-                  <input name="checkbox" type="checkbox" />
-                  <div class="modal__agree">
-                     Нажимая на кнопку, вы соглашаетесь на обработку персональных данныхи
-                     <span>политикой конфиденциальности</span>
+               <form action="handler.php" method="POST" class="modal__form _send">
+                  <div class="modal__label">Как с вами удобнее связаться?</div>
+                  <div class="modal__input">
+                     <input
+                        class="modal__input _phone"
+                        type="tel"
+                        name="usertel"
+                        data-item="placeholder"
+                        placeholder="+7 (___) __ - __ - __" />
+                     <button name="button" class="modal__btn _btn">Оформить предзаказ</button>
                   </div>
-               </div>
-            </form>
+                  <div class="modal__confirm">
+                     <input name="checkbox" type="checkbox" />
+                     <div class="modal__agree">
+                        Нажимая на кнопку, вы соглашаетесь на обработку персональных данныхи
+                        <span>политикой конфиденциальности</span>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <picture class="modal__image">
+               <source srcset="img/modal/modal_image.webp" type="image/webp" />
+               <source srcset="img/modal/modal_image.jpeg" type="image/jpeg" />
+               <img src="img/modal/modal_image.jpeg" alt="modal image" />
+            </picture>
          </div>
-         <picture class="modal__image">
-            <source srcset="img/modal/modal_image.webp" type="image/webp" />
-            <source srcset="img/modal/modal_image.jpeg" type="image/jpeg" />
-            <img src="img/modal/modal_image.jpeg" alt="modal image" />
-         </picture>
+      </div>
+   </div>
+   <div class="modals__popup popup popup_thanks modal-thx">
+      <div class="popup__content modal-thx-dialog">
+         <div class="popup__body">
+            <div class="modal__close" data-toggle="modal-thx"></div>
+            <div class="modal__body">
+               <h2 class="modal__title">Спасибо за заявку</h2>
+            </div>
+         </div>
       </div>
    </div>
 </section>
@@ -738,8 +753,6 @@
    </div>
 </footer>
       </div>
-			<script src="./js/inputmask.min.js"></script>
-      <script src="./js/just-validate.production.min.js"></script>
-      <script src="./js/script.js"></script>
+			
    </body>
 </html>

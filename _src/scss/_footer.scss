@@ -1,18 +1,6 @@
 .footer {
    background-color: #f4f7fb;
-   &__container {
-   }
-
-   &__top {
-   }
-
-   &__mid {
-   }
-
-   &__bottom {
-   }
 }
-
 .top-footer {
    padding: 46px 0 75px 0;
    display: flex;
@@ -38,10 +26,6 @@
          row-gap: 20px;
       }
    }
-
-   &__block {
-   }
-
    &__title {
       a {
          font-weight: 500;
@@ -60,7 +44,6 @@
          margin: 0px 0px 10px 0px;
       }
    }
-
    &__list {
       display: flex;
       flex-direction: column;
@@ -74,15 +57,12 @@
          max-height: none;
       }
    }
-
    &__item {
       padding-right: 46px;
-
       a {
          font-size: 14px;
          line-height: 20px;
          color: #5d6c7b;
-
          @media (min-width: 992px) {
             &:hover {
                text-decoration: underline;
@@ -93,7 +73,6 @@
          font-size: 12px;
          color: $second_color;
       }
-
       &_phone {
          a {
             font-weight: 500;
@@ -102,13 +81,11 @@
             white-space: nowrap;
          }
       }
-
       &_time {
          font-size: 12px;
          color: #5d6c7b;
       }
    }
-
    &__contacts {
       flex: 0 1 50%;
       display: flex;
@@ -136,7 +113,6 @@
          }
       }
    }
-
    &__popup {
       display: inline-block;
       font-weight: 500;
@@ -182,7 +158,6 @@
          }
       }
    }
-
    &__logo {
       max-width: 116px;
       margin-right: 59px;
@@ -199,16 +174,12 @@
          color: $second_color;
       }
    }
-
    &__link {
       margin: 0px 10px 0px 0px;
 
       &:last-child {
          margin: 0px 0px 0px 0px;
       }
-   }
-
-   &__social {
    }
 }
 .social-mid {
@@ -224,9 +195,6 @@
    &:last-child {
       margin: 0px 0px 0px 0px;
    }
-   &__text {
-   }
-
    &__name {
       font-family: 'Jost';
       font-weight: 500;
@@ -234,7 +202,6 @@
       color: $second_color;
       margin: 0px 0px 5px 0px;
    }
-
    &__subs {
       font-weight: 400;
       font-size: 10px;
@@ -262,7 +229,6 @@
          margin: 0px 0px 10px 0px;
       }
    }
-
    &__requisites,
    &__confidence {
       font-size: 12px;
@@ -274,12 +240,10 @@
          }
       }
    }
-
    &__info {
       display: flex;
       align-items: center;
    }
-
    &__payment {
       display: flex;
       align-items: center;
@@ -310,19 +274,16 @@
          }
       }
    }
-
    &__chats {
       display: flex;
       align-items: center;
       gap: 14px;
    }
-
    &__subtitle {
       font-size: 14px;
       line-height: 20px;
       color: $second_color;
    }
-
    &__chat {
       width: 17px;
       height: 17px;
