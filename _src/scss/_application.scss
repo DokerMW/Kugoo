@@ -72,6 +72,7 @@
          @media (max-width: $md3) {
             width: 100%;
          }
+         &,
          &::placeholder {
             font-family: 'Jost';
             font-style: normal;
